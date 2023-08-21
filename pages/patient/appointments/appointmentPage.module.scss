@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.doctors {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.doctor {
+  display: grid;
+  grid-template-columns: 6fr 5.5fr;
+  gap: 16px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+}
+.title {
+  margin-top: 1rem;
+  align-self: center;
+}

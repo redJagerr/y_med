@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.75rem;
+}
+.sortContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.sort {
+  width: 180px;
+}

@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.selectContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.select {
+  width: 14rem;
+}
+.add {
+  align-self: flex-end;
+}

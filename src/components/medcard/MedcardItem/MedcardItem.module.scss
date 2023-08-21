@@ -1,0 +1,83 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  border-radius: var(--border-radius);
+  background-color: white;
+  box-shadow: var(--box-shadow);
+  padding: 0.5rem 1rem;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom-width: 2px;
+  border-color: rgb(229 231 235);
+  padding-bottom: 0.25rem;
+}
+.typeTag {
+  border-radius: var(--border-radius);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  color: white;
+  &Tests {
+    background-color: var(--color-pink);
+  }
+  &Appointment {
+    background-color: var(--color-green);
+  }
+  &Survey {
+    background-color: var(--color-violet);
+  }
+}
+.tagIcon {
+  width: 40px;
+  height: 40px;
+  &Tests {
+    color: var(--color-pink);
+  }
+  &Appointment {
+    color: var(--color-green);
+  }
+  &Survey {
+    color: var(--color-violet);
+  }
+}
+.date {
+  font-weight: 500;
+}
+.mainContainer {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.iconContainer {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+.subtitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-gray);
+}
+.photosContainer {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+.open {
+  flex: 3 1 0%;
+}
+.delete {
+  flex: 1 1 0%;
+  background-color: var(--color-red);
+}

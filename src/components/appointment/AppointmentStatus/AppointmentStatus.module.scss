@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  border-radius: var(--border-radius);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  color: white;
+}
+.confirmed {
+  background-color: var(--color-green);
+}
+.unconfirmed {
+  background-color: var(--color-gray-light);
+}
+.completed {
+  background-color: var(--primary-color-light);
+}
+.canceled {
+  background-color: var(--color-red);
+}

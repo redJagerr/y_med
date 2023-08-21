@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-radius: var(--border-radius);
+  background-color: var(--color-gray-light);
+  padding: 1rem;
+  background-color: white;
+  box-shadow: (var(--box-shadow));
+}
+.title {
+  align-self: center;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.75rem;
+}
+.submit {
+  align-self: center;
+}

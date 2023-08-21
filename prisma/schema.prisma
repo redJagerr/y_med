@@ -1,0 +1,121 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Patient {
+  uid        String           @unique
+  name       String
+  email      String
+  birthDate  DateTime
+  phone      String
+  sex        String
+  appointments Appointments[]
+  medcard    Medcard_Record[]
+  favourites Favourites[]
+  reviews    Reviews[]
+  medcardAccess Medcard_Access[]
+  photoUrl String?
+}
+
+model Medcard_Record {
+  id        String     @unique
+  patientId String
+  patient   Patient  @relation(fields: [patientId], references: [uid])
+  type      String
+  photos    String[]
+  title     String
+  subtitle  String
+  date      DateTime
+}
+
+model Favourites {
+  id               Int     @unique @default(autoincrement())
+  patientId        String
+  patient          Patient @relation(fields: [patientId], references: [uid])
+  doctorId         String
+  doctorName       String
+  doctorPhoto      String
+  doctorSpeciality String
+}
+
+model Doctors {
+  uid          String         @unique
+  name         String
+  birthDate    DateTime
+  phone        String
+  sex          String
+  education    Education[]
+  speciality   String[]
+  reviews      Reviews[]
+  tags         String[]
+  seniority   Int
+  averageRating String
+  expirience   Expirience[]
+  price        Int
+  appointments Appointments[]
+  photoUrl String
+  schedule DoctorsSchedule[]
+    medcardAccess Medcard_Access[]
+}
+
+model DoctorsSchedule {
+  id Int @default(autoincrement()) @unique
+  doctorId String
+  doctor Doctors @relation(fields: [doctorId], references: [uid])
+  scheduleStart String
+  scheduleEnd String
+  interval Int
+  days Int[]
+  weekend Int[]
+}
+
+model Reviews {
+  id        Int     @unique @default(autoincrement())
+  doctorId  String
+  doctor    Doctors @relation(fields: [doctorId], references: [uid])
+  patientId String
+  patient   Patient @relation(fields: [patientId], references: [uid])
+  text      String
+  rating    Int
+  date  DateTime
+}
+
+model Expirience {
+  id         Int     @unique @default(autoincrement())
+  doctorId   String
+  doctor     Doctors @relation(fields: [doctorId], references: [uid])
+  year String
+  title String
+}
+
+model Education {
+  id          Int     @unique @default(autoincrement())
+  doctorId    String
+  doctor      Doctors @relation(fields: [doctorId], references: [uid])
+  year  String
+  title String
+}
+
+model Appointments {
+  id        Int               @unique @default(autoincrement())
+  doctorId  String 
+  doctor    Doctors           @relation(fields: [doctorId], references: [uid])
+  patientId String 
+  patient Patient @relation(fields: [patientId],references: [uid])
+  time      DateTime
+  status    String
+  speciality String
+}
+model Medcard_Access {
+  id Int @unique @default(autoincrement())
+  doctorId  String 
+  doctor    Doctors           @relation(fields: [doctorId], references: [uid])
+  patientId String 
+  patient Patient @relation(fields: [patientId],references: [uid])
+  deadline DateTime
+}

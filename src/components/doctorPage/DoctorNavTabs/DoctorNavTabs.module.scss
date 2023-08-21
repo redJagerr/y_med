@@ -1,0 +1,19 @@
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  overflow: hidden;
+  border-radius: 0.375rem;
+  background-color: white;
+  justify-content: flex-start;
+  width: fit-content;
+  box-shadow: var(--box-shadow);
+}
+.tab {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+}
+.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: var(--border-radius);
+}

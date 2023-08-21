@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 0.75rem;
+  border-radius: var(--border-radius);
+  background-color: white;
+  padding: 1rem 0.75rem;
+  box-shadow: var(--box-shadow);
+}
+.info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.name {
+  font-weight: 500;
+}
+.date {
+  color: var(--color-gray);
+}
+.ratingContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.rate {
+  font-weight: 600;
+}
+.text {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+.more {
+  color: var(--primary-color);
+  font-weight: 500;
+}

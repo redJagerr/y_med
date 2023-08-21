@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  height: 80vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+.toggleFromButton {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+.buttons {
+  display: flex;
+  gap: 0.75rem;
+}

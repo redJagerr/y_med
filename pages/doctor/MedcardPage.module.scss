@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.tabs {
+  background-color: white;
+  width: max-content;
+  border-radius: var(--border-radius);
+  box-shadow: (var(--box-shadow));
+}
+.appointments {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.title {
+  align-self: center;
+  margin-top: 1rem;
+}

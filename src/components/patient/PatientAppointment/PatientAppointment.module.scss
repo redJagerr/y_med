@@ -1,0 +1,55 @@
+.appointment {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  border-radius: var(--border-radius);
+  background-color: white;
+  padding: 0.5rem 1rem;
+  box-shadow: var(--box-shadow);
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid rgb(218, 218, 218);
+  padding-bottom: 0.25rem;
+}
+.date {
+  font-weight: 600;
+}
+.main {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.photo {
+  aspect-ratio: 1/1;
+  width: 16.6%;
+  overflow: hidden;
+  border-radius: 100%;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+}
+.name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-gray);
+}
+.speciality {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+.buttons {
+  margin: 0 auto;
+  display: flex;
+  width: 66.6%;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-weight: 500;
+  color: white;
+}
+.cancelButton {
+  color: var(--color-red);
+  outline-color: var(--color-red);
+}

@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  gap: 1rem;
+  border-radius: var(--border-radius);
+  background-color: white;
+  padding: 0.5rem;
+  box-shadow: (var(--box-shadow));
+}
+.photoContainer {
+  aspect-ratio: 1/1;
+  width: 8rem;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+}
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.name {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+.appointments {
+  font-size: 1.25rem;
+}
+.appointmentsNumber {
+  font-weight: 600;
+  color: var(--primary-color);
+}

@@ -1,0 +1,18 @@
+.container {
+  position: relative;
+  aspect-ratio: 1/1;
+  width: 6rem;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+}
+.delete {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.25rem;
+  border-radius: 100%;
+  background-color: white;
+  &:hover {
+    background-color: var(--color-red);
+    color: white;
+  }
+}

@@ -1,0 +1,68 @@
+.mainWrapper {
+  border-radius: var(--border-radius);
+  background-color: white;
+  padding: 1rem;
+  box-shadow: var(--box-shadow);
+}
+
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.inputsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.sectionContainer {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+.professionalContainer {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.input {
+  border-radius: var(--border-radius);
+  padding: 0.25rem 0.75rem;
+  &Full {
+    width: 100%;
+  }
+}
+.title {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+.qualificationContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.qualificationList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.qualificationTitle {
+  font-weight: 500;
+  font-size: 1.125rem;
+}
+.userDataContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin: 0 auto;
+}
+
+.register {
+  align-self: center;
+}

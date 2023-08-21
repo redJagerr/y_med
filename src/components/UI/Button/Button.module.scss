@@ -1,0 +1,30 @@
+.common {
+  border-radius: var(--border-radius);
+  font-weight: 600;
+}
+.default {
+  background-color: var(--primary-color);
+  color: white;
+  &:hover {
+    opacity: 0.85;
+  }
+}
+.standart {
+  padding: 0.5rem 0.75rem;
+}
+.small {
+  padding: 0.25rem 0.5rem;
+}
+.outline {
+  outline: 2px solid var(--primary-color);
+  outline-offset: -2px;
+  background-color: transparent;
+  color: var(--primary-color);
+}
+.link {
+  background-color: transparent;
+  color: var(--primary-color-light);
+}
+.disabled {
+  background-color: var(--color-gray);
+}

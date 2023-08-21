@@ -1,0 +1,11 @@
+.title {
+  padding: 0.5rem;
+  font-size: larger;
+  font-weight: 600;
+}
+.list {
+  display: flex;
+  width: 60%;
+  flex-wrap: wrap;
+  gap: 1rem;
+}

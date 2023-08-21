@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  //border: 2px solid var(--color-gray);
+}
+.select {
+  width: 16rem;
+  color: black;
+}
+.add {
+  align-self: flex-start;
+}
+.descriptionText {
+  width: 100%;
+}
+.year {
+  width: fit-content;
+}
