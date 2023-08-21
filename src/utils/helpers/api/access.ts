@@ -15,7 +15,7 @@ interface GiveAccessParams {
 
 export const getAccessStatus = async ({ patientId, uid }: GetAccessStatusParams) => {
   const { data } = await axios(
-    `https://your-med.onrender.com/api/access?patientId=${patientId}&&doctorId=${uid}`
+    `https://ymed-4j4e.onrender.com/api/access?patientId=${patientId}&&doctorId=${uid}`
   );
   return data.isAccess;
 };
@@ -26,6 +26,6 @@ export const giveAccess = async ({ patientId, doctorId, durationDays }: GiveAcce
     doctorId,
     deadline: new Date(dayjs().add(durationDays, 'day').valueOf())
   };
-  const result = await axios.post('https://your-med.onrender.com/api/access', accessData);
+  const result = await axios.post('https://ymed-4j4e.onrender.com/api/access', accessData);
   return result;
 };

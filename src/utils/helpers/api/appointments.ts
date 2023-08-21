@@ -17,19 +17,19 @@ interface GetDoctorAppointmentsProps {
 
 export const getPatientAppointments = async ({ uid, page }: GetPatientAppointmentsParams) => {
   const appointments = await axios(
-    `https://your-med.onrender.com/api/appointments?type=${'patient'}&uid=${uid}&page=${page}`
+    `https://ymed-4j4e.onrender.com/api/appointments?type=${'patient'}&uid=${uid}&page=${page}`
   );
   return appointments.data;
 };
 
 export const getAdminAppointment = async (): Promise<DoctorAppointmentsForAdmin> => {
-  const appointments = await axios('https://your-med.onrender.com/api/adminAppointments');
+  const appointments = await axios('https://ymed-4j4e.onrender.com/api/adminAppointments');
   return appointments.data;
 };
 
 export const getDoctorAppointments = async ({ uid, date }: GetDoctorAppointmentsProps) => {
   const appointments = await axios(
-    `https://your-med.onrender.com/api/doctorAppointments?uid=${uid}&date=${date}`
+    `https://ymed-4j4e.onrender.com/api/doctorAppointments?uid=${uid}&date=${date}`
   );
   return appointments.data;
 };
@@ -40,7 +40,7 @@ export const changeAppointmentStatus = async (
   status: AppointmentStatusType
 ) => {
   try {
-    await axios.put(`https://your-med.onrender.com/api/appointments?id=${id}`, {
+    await axios.put(`https://ymed-4j4e.onrender.com/api/appointments?id=${id}`, {
       status
     });
     router.replace(router.asPath);
@@ -54,7 +54,7 @@ export const makeAnAppointment = async (
   changeStatusState: (status: FormStatus) => void
 ) => {
   try {
-    await axios.post('https://your-med.onrender.com/api/appointments', preparedAppointment);
+    await axios.post('https://ymed-4j4e.onrender.com/api/appointments', preparedAppointment);
     changeStatusState('success');
   } catch (error) {
     if (error instanceof Error) console.log(error);

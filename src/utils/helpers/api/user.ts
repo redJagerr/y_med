@@ -28,13 +28,13 @@ interface SignUpDoctorParams {
 
 export const getUser = async ({ uid, type }: { [key: string]: string }) => {
   const { data }: { data: Patient | Doctors } = await axios(
-    `https://your-med.onrender.com/api/user?uid=${uid}&type=${type}`
+    `https://ymed-4j4e.onrender.com/api/user?uid=${uid}&type=${type}`
   );
   return data;
 };
 
 export const addPatient = async (userDataBody: Patient) => {
-  const result = await axios.post(`https://your-med.onrender.com/api/user?type=patient`, {
+  const result = await axios.post(`https://ymed-4j4e.onrender.com/api/user?type=patient`, {
     ...userDataBody
   });
   return result;
@@ -57,7 +57,7 @@ export const signUpDoctor = ({ data, setStatus }: SignUpDoctorParams) => {
         photoUrl
       };
       finalData.schedule.doctorId = uid;
-      await axios.post(`https://your-med.onrender.com/api/user?type=doctor`, finalData);
+      await axios.post(`https://ymed-4j4e.onrender.com/api/user?type=doctor`, finalData);
       setStatus('success');
     })
     .catch((error) => {
