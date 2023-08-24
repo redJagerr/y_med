@@ -3,7 +3,7 @@
 
 import * as firebaseAdmin from 'firebase-admin';
 
-import serviceAccount from './med-app-5bd03-firebase-adminsdk-lbjyo-26f60a0dae.json';
+import serviceAccount from '@/firebase.json'
 
 try {
   firebaseAdmin.initializeApp({
